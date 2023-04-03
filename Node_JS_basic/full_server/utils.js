@@ -20,4 +20,15 @@ function readDatabase(path) {
 
           fields[students[i][3]].push(students[i][0]);
         }
+      }
 
+      delete fields.field;
+
+      resolve(fields);
+
+      //   return fields;
+    });
+  });
+}
+
+export default readDatabase;
