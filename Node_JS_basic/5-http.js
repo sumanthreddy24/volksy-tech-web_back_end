@@ -23,4 +23,14 @@ const app = http.createServer(async (req, res) => {
       res.end(`${students.join('\n')}`);
     } catch (error) {
       res.end(error.message);
+    }
+  }
+  res.statusCode = 404;
+  res.end();
+});
 
+app.listen(port, hostname, () => {
+  //   console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+module.exports = app;
